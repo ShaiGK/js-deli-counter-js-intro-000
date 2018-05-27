@@ -4,8 +4,8 @@ function takeANumber (deliLine,custName) {
 }
 
 function nowServing (array) {
-  var arr = []
-  arr.push(array[0])
-  array.shift()
-  return `Currently serving ${arr}.`
+  if (!array.length) {
+    return "There is no one waiting to be served!"
+  }
+  return `Currently serving ${array.shift()}.`
 }
