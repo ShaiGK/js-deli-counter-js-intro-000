@@ -9,3 +9,14 @@ function nowServing (array) {
   }
   return `Currently serving ${array.shift()}.`
 }
+
+function currentLine(line) {
+  if (!line.length) {
+    return "The line is currently empty."
+  }
+  const numbersAndNames = []
+  for (i = 0, i < line.length, i++) {
+    numbersAndNames.push(`${i + 1}. ${line[i]}`)
+    return `The line is currently: ${numbersAndNames.join(", ")}`
+  }
+}
